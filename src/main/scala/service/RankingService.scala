@@ -12,7 +12,7 @@ object RankingService {
     printLine {
       val body = movies.zipWithIndex
         .map { case (m, i) =>
-          val title  = sanitize(m.title)
+          val title    = sanitize(m.title)
           val mkGenres = m.genres.mkString(", ")
           s"${i + 1}. $title — [$mkGenres]"
         }
@@ -36,5 +36,14 @@ object RankingService {
       _       <- printMovies(movies)
     } yield ()
 
-  def getRanked = ???
+  def getRanked(preferredGenre: String): ZIO[RankingRepo, IOException, Unit] =
+    for {
+      service <- ZIO.service[RankingRepo]
+      _ <- service
+        .getRanked(preferredGenre)
+        .foldZIO(
+          err => printLine(err.toString),
+          movies => printMovies(movies)
+        )
+    } yield ()
 }

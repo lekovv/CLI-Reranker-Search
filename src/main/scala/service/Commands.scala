@@ -11,9 +11,11 @@ object Commands {
     Args.none
   ).map(_ => Subcommand.GetAll())
 
-  val getRanked: Command[Subcommand] = Command(
+  private val genreArg = Args.text("genre")
+
+  val getRankedCommand: Command[Subcommand] = Command(
     name = "rank",
     Options.none,
-    Args.none,
-  ).map(_ => Subcommand.GetRanked())
+    genreArg,
+  ).map(genre => Subcommand.GetRanked(genre))
 }

@@ -1,14 +1,14 @@
 package service
 
 import db.MovieData
-import exception.RankingError
+import exception.RankingError.GenreNotFound
 import models.Movie
 import zio.{IO, UIO, ZIO, ZLayer}
 
 final case class RankingRepoLive(db: MovieData) extends RankingRepo {
   override def getAll: UIO[List[Movie]] = ZIO.succeed(db.movies)
 
-  override def getRanked(preferredGenre: String): IO[RankingError, List[Movie]] = {
+  override def getRanked(preferredGenre: String): IO[GenreNotFound, List[Movie]] = {
     ???
   }
 }

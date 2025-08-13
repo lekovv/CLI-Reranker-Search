@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b26fe12f-b61c-426d-b538-efc0bc17a618" name="Changes" comment="" />
+    <list default="true" id="b26fe12f-b61c-426d-b538-efc0bc17a618" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules/MovieReranker-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/MovieReranker-build.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/MovieReranker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/MovieReranker.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Main.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/service/Commands.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/service/Commands.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/service/RankingRepoLive.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/service/RankingRepoLive.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/service/RankingService.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/service/RankingService.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/utils/Subcommand.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/utils/Subcommand.scala" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
