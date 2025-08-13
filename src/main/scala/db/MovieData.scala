@@ -1,4 +1,4 @@
-package service
+package db
 
 import models.Movie
 import zio.ZLayer

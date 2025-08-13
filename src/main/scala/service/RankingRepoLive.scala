@@ -1,5 +1,6 @@
 package service
 
+import db.MovieData
 import exception.RankingError
 import models.Movie
 import zio.{IO, UIO, ZIO, ZLayer}
