@@ -1,4 +1,4 @@
-package service
+package service.reranker
 
 import db.MovieData
 import exception.RankingError.GenreNotFound

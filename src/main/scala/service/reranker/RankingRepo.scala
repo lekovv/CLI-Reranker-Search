@@ -1,6 +1,6 @@
-package service
+package service.reranker
 
-import exception.RankingError
+import exception.RankingError.GenreNotFound
 import models.Movie
 import zio.macros.accessible
 import zio.{IO, UIO}
@@ -8,7 +8,7 @@ import zio.{IO, UIO}
 @accessible
 trait RankingRepo {
   def getAll: UIO[List[Movie]]
-  def getRanked(preferredGenre: String): IO[RankingError, List[Movie]]
+  def getRanked(preferredGenre: String): IO[GenreNotFound, List[Movie]]
 }
 
 object RankingRepo {
