@@ -1,4 +1,4 @@
-val projectName    = "MovieReranker"
+val projectName    = "CLI-Reranker-Search"
 val projectVersion = "0.0.1"
 
 def scalaFixSettings = Seq(

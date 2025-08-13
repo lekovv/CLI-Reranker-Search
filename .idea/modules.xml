@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MovieReranker.iml" filepath="$PROJECT_DIR$/.idea/modules/MovieReranker.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MovieReranker-build.iml" filepath="$PROJECT_DIR$/.idea/modules/MovieReranker-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CLI-Reranker-Search.iml" filepath="$PROJECT_DIR$/.idea/modules/CLI-Reranker-Search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CLI-Reranker-Search-build.iml" filepath="$PROJECT_DIR$/.idea/modules/CLI-Reranker-Search-build.iml" />
     </modules>
   </component>
 </project>
