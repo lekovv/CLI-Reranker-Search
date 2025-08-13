@@ -1,6 +1,6 @@
 package service.reranker
 
-import utils.PrintService.printMovies
+import utils.Common.printMovies
 import zio.Console.printLine
 import zio.ZIO
 
