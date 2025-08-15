@@ -9,6 +9,8 @@ import scala.annotation.tailrec
 
 object Common {
 
+  /** Common methods 👇🏻
+    */
   def printMovies(movies: List[Movie]): ZIO[Any, IOException, Unit] =
     printLine {
       val body = movies.zipWithIndex
@@ -32,6 +34,9 @@ object Common {
 
   def normalize(s: String): String = s.trim.toLowerCase
 
+  /** Methods for executing the ranking command 👇🏻
+    */
+
   private val lambda = 0.8
 
   private def rel(genres: Set[String], pref: String): Double =
@@ -54,7 +59,7 @@ object Common {
 
     if (remaining.isEmpty) selected
     else {
-      val scored: Vector[((Double, Int), (Movie, Int, Set[String]))] =
+      val scored =
         remaining.map { case triple @ (_, idx, gs) =>
           val maxSim =
             if (selected.isEmpty) 0.0
@@ -66,5 +71,84 @@ object Common {
       val best = scored.maxBy(_._1)._2
       loop(preferredGenre, selected :+ best, remaining.filterNot(_ == best))
     }
+  }
+
+  /** Methods for executing the search command 👇🏻
+    */
+
+  private val stop: Set[String] =
+    Set(
+      "a",
+      "an",
+      "the",
+      "and",
+      "or",
+      "but",
+      "if",
+      "then",
+      "else",
+      "when",
+      "while",
+      "of",
+      "in",
+      "on",
+      "at",
+      "to",
+      "for",
+      "from",
+      "by",
+      "with",
+      "about",
+      "as",
+      "into",
+      "is",
+      "am",
+      "are",
+      "was",
+      "were",
+      "be",
+      "been",
+      "being",
+      "do",
+      "does",
+      "did",
+      "doing",
+      "this",
+      "that",
+      "these",
+      "those",
+      "it",
+      "its",
+      "he",
+      "she",
+      "they",
+      "them",
+      "his",
+      "her",
+      "their",
+      "we",
+      "us",
+      "you",
+      "your",
+      "i",
+      "me",
+      "my",
+      "ours",
+      "yours"
+    )
+
+  def tokenize(s: String): Vector[String] = {
+    val tokenRe = """[\p{L}\p{Nd}]+""".r
+
+    tokenRe
+      .findAllIn(normalize(s))
+      .toVector
+      .filter(t => t.nonEmpty && !stop.contains(t))
+  }
+
+  def termsFor(m: Movie): Vector[String] = {
+    val titleTerms = tokenize(m.title)
+    val descTerms  = tokenize(m.description)
+    titleTerms ++ titleTerms ++ descTerms
   }
 }

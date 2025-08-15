@@ -7,7 +7,8 @@
     <list default="true" id="b26fe12f-b61c-426d-b538-efc0bc17a618" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/db/MovieData.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/db/MovieData.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/models/Movie.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/models/Movie.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/service/search/SearchRepoLive.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/service/search/SearchRepoLive.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/utils/Common.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/utils/Common.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -31,7 +31,7 @@ object MovieData {
         ),
         Movie(
           "The Martian",
-          "Stranded on a hostile planet, a resourceful astronaut hacks science to survive, turning scarcity into strategy while Earth races to attempt a daring rescue.",
+          "Stranded on a hostile planet, a resourceful astronaut hacks science to survive, turning scarcity into strategy while Earth races to attempt a daring rescue",
           List("adventure", "fantasy")
         )
       )
